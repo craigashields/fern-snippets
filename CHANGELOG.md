@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.0] - 2026-05-19
+
+### Changed
+- Replaced JSON snippet contribution with a TypeScript `CompletionItemProvider` and `HoverProvider`
+- Both `fern-` prefix and `<ComponentName` now trigger completions
+- Autocomplete popup shows component description, props table, example, and doc link
+- Hovering over any Fern JSX tag shows the same documentation inline
+
 ## [0.2.0] - 2026-05-19
 
 ### Added
