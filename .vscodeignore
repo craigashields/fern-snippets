@@ -4,6 +4,7 @@ snippets/
 .claude/
 .gitignore
 .vscodeignore
+CONTRIBUTING.md
 src/
 build.js
 tsconfig.json

@@ -115,42 +115,6 @@ Both triggers open a rich autocomplete popup showing the component description, 
 |---|---|---|
 | `fern-versions` | `<Versions>` | Show different content based on version selection |
 
-## Development
-
-**Validate snippets (reference file):**
-
-```
-npm run validate
-```
-
-**Build the TypeScript extension:**
-
-```
-npm run build
-```
-
-**Watch mode (rebuilds on save):**
-
-```
-npm run watch
-```
-
-**Package the extension:**
-
-```
-npm run package
-```
-
-This produces `fern-snippets-0.3.0.vsix` in the project root.
-
-**Install locally from source:**
-
-```
-npm run package
-```
-
-Then in VS Code: Extensions panel → `...` → "Install from VSIX..." → select `fern-snippets-0.3.0.vsix`.
-
 ## Component Docs
 
 Full Fern component documentation: [buildwithfern.com/learn/docs/writing-content/components/overview](https://buildwithfern.com/learn/docs/writing-content/components/overview)
