@@ -41,6 +41,29 @@ In any `.mdx` or `.md` file, type a trigger prefix and press `Tab` (or select fr
 | `fern-badge` | `<Badge>` | Badge with intent dropdown (8 options) |
 | `fern-button` | `<Button>` | Button with intent dropdown (5 options), href, and label |
 
+## Development
+
+**Validate snippets:**
+
+```
+node scripts/validate-snippets.js
+```
+
+**Package the extension:**
+
+```
+npx @vscode/vsce package --allow-missing-repository
+```
+
+This produces `fern-snippets-0.1.0.vsix` in the project root. The `--allow-missing-repository` flag suppresses the warning about the empty `repository.url` field in `package.json`.
+
+**Install locally from source:**
+
+```
+npx @vscode/vsce package --allow-missing-repository
+code --install-extension fern-snippets-0.1.0.vsix
+```
+
 ## Component Docs
 
 Full Fern component documentation: [buildwithfern.com/learn/docs/writing-content/components/overview](https://buildwithfern.com/learn/docs/writing-content/components/overview)
