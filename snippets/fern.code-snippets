@@ -101,5 +101,48 @@
       "</Steps>"
     ],
     "description": "Fern Steps with three Step children"
+  },
+  "Fern Code": {
+    "prefix": "fern-code",
+    "body": [
+      "```${1|javascript,typescript,python,bash,go,java,csharp,curl,http,ruby,swift,kotlin|} ${2:title}",
+      "$3",
+      "```"
+    ],
+    "description": "Fern fenced code block with language dropdown and title"
+  },
+  "Fern CodeBlock": {
+    "prefix": "fern-codeblock",
+    "body": [
+      "<CodeBlock links={{\"$1\": \"$2\"}}>",
+      "```${3|javascript,typescript,python,bash,go,java,csharp,curl,http|}",
+      "$4",
+      "```",
+      "</CodeBlock>"
+    ],
+    "description": "Fern CodeBlock JSX component with deep link support"
+  },
+  "Fern Accordion": {
+    "prefix": "fern-accordion",
+    "body": [
+      "<Accordion title=\"$1\">",
+      "  $2",
+      "</Accordion>"
+    ],
+    "description": "Fern Accordion with title and content"
+  },
+  "Fern AccordionGroup": {
+    "prefix": "fern-accordiongroup",
+    "body": [
+      "<AccordionGroup>",
+      "  <Accordion title=\"$1\">",
+      "    $2",
+      "  </Accordion>",
+      "  <Accordion title=\"$3\">",
+      "    $4",
+      "  </Accordion>",
+      "</AccordionGroup>"
+    ],
+    "description": "Fern AccordionGroup with two Accordion children"
   }
 }
