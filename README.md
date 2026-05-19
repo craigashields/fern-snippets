@@ -1,4 +1,4 @@
-# Fern Snippets
+# Fern Snippets (unofficial)
 
 Rich autocomplete and hover documentation for [Fern](https://buildwithfern.com) MDX components in VS Code.
 
@@ -42,6 +42,8 @@ code --install-extension fern-snippets-0.3.0.vsix
 ## Usage
 
 In any `.mdx` or `.md` file, start typing a trigger and select from the autocomplete dropdown. Press `Tab` to accept and move between placeholders. Props with fixed values (like `intent` or `cols`) show a choice dropdown at their tab stop.
+
+Snippets include required props and the most commonly used optional ones. For the full prop reference, hover over any component tag or follow the "View docs →" link in the autocomplete popup.
 
 ---
 
