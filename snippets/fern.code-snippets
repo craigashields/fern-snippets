@@ -259,5 +259,73 @@
       "</ParamField>"
     ],
     "description": "Fern ParamField — document an API parameter with type and description"
+  },
+  "Fern Files": {
+    "prefix": "fern-files",
+    "body": [
+      "<Files>",
+      "  <Folder name=\"$1\" defaultOpen>",
+      "    <File name=\"$2\" />",
+      "    <File name=\"$3\" />",
+      "  </Folder>",
+      "  <File name=\"$4\" />",
+      "</Files>"
+    ],
+    "description": "Fern Files — interactive file tree with folders and files"
+  },
+  "Fern Prompt": {
+    "prefix": "fern-prompt",
+    "body": [
+      "<Prompt title=\"$1\" actions={[\"${2|cursor,claude,chatgpt|}\"]}>" ,
+      "  $3",
+      "</Prompt>"
+    ],
+    "description": "Fern Prompt — copyable AI prompt card with open-in actions"
+  },
+  "Fern Table": {
+    "prefix": "fern-table",
+    "body": [
+      "| $1 | $2 | $3 |",
+      "|---|---|---|",
+      "| $4 | $5 | $6 |",
+      "| $7 | $8 | $9 |"
+    ],
+    "description": "Fern Table — standard markdown table (3 columns, 2 rows)"
+  },
+  "Fern StickyTable": {
+    "prefix": "fern-sticky-table",
+    "body": [
+      "<StickyTable>",
+      "| $1 | $2 | $3 |",
+      "|---|---|---|",
+      "| $4 | $5 | $6 |",
+      "</StickyTable>"
+    ],
+    "description": "Fern StickyTable — table with sticky header row"
+  },
+  "Fern SearchableTable": {
+    "prefix": "fern-searchable-table",
+    "body": [
+      "<SearchableTable placeholder=\"$1\">",
+      "| $2 | $3 | $4 |",
+      "|---|---|---|",
+      "| $5 | $6 | $7 |",
+      "</SearchableTable>"
+    ],
+    "description": "Fern SearchableTable — table with real-time search filter"
+  },
+  "Fern Versions": {
+    "prefix": "fern-versions",
+    "body": [
+      "<Versions>",
+      "  <Version version=\"$1\" title=\"$2\" default>",
+      "    $3",
+      "  </Version>",
+      "  <Version version=\"$4\" title=\"$5\">",
+      "    $6",
+      "  </Version>",
+      "</Versions>"
+    ],
+    "description": "Fern Versions — show different content based on version selection"
   }
 }
