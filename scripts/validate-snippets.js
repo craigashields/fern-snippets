@@ -3,13 +3,21 @@ const path = require('path');
 const assert = require('assert');
 
 const EXPECTED_PREFIXES = [
+  // v0.1.0
   'fern-callout', 'fern-note', 'fern-info', 'fern-warning', 'fern-success',
   'fern-error', 'fern-tip', 'fern-check', 'fern-launch',
   'fern-card', 'fern-cardgroup',
   'fern-tabs', 'fern-steps',
   'fern-code', 'fern-codeblock',
   'fern-accordion', 'fern-accordiongroup',
-  'fern-frame', 'fern-badge', 'fern-button'
+  'fern-frame', 'fern-badge', 'fern-button',
+  // v0.2.0
+  'fern-anchor', 'fern-aside', 'fern-copy', 'fern-download',
+  'fern-endpoint-request', 'fern-endpoint-response', 'fern-endpoint-schema',
+  'fern-files', 'fern-icon', 'fern-if', 'fern-indent', 'fern-paramfield',
+  'fern-prompt', 'fern-runnable-endpoint', 'fern-schema',
+  'fern-table', 'fern-sticky-table', 'fern-searchable-table',
+  'fern-tooltip', 'fern-versions'
 ];
 
 const snippetsPath = path.join(__dirname, '..', 'snippets', 'fern.code-snippets');
