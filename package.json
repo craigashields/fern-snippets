@@ -2,7 +2,7 @@
   "name": "fern-snippets",
   "displayName": "Fern Snippets",
   "description": "VS Code snippets for Fern documentation components",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "publisher": "fern-user",
   "engines": {
     "vscode": "^1.60.0"
