@@ -132,3 +132,112 @@ COMPONENTS.push(
     snippetBody: '<Launch>$1</Launch>',
   },
 );
+
+COMPONENTS.push(
+  // Cards and layout
+  {
+    name: 'Card',
+    prefix: 'fern-card',
+    jsxForm: true,
+    description: 'Card with title, optional icon, and optional link.',
+    props: [
+      { name: 'title', type: 'string', required: true, description: 'Card heading text.' },
+      { name: 'icon', type: 'string', required: false, description: 'Font Awesome icon name (e.g. "rocket").' },
+      { name: 'href', type: 'string', required: false, description: 'URL the card navigates to when clicked.' },
+    ],
+    example: '<Card title="Getting Started" icon="rocket" href="/quickstart">\n  Learn how to set up your first project.\n</Card>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/card',
+    snippetBody: '<Card title="$1" icon="$2" href="$3">\n  $4\n</Card>',
+  },
+  {
+    name: 'CardGroup',
+    prefix: 'fern-cardgroup',
+    jsxForm: true,
+    description: 'Grid of Card components with configurable column count.',
+    props: [
+      { name: 'cols', type: 'number', required: false, description: 'Number of columns (default 2).', choices: ['2', '3', '4'] },
+    ],
+    example: '<CardGroup cols={2}>\n  <Card title="API Reference" icon="code" href="/api">\n    Full endpoint reference.\n  </Card>\n  <Card title="Guides" icon="book" href="/guides">\n    Step-by-step tutorials.\n  </Card>\n</CardGroup>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/card',
+    snippetBody: '<CardGroup cols={${1|2,3,4|}}>\n  <Card title="$2" icon="$3" href="$4">\n    $5\n  </Card>\n  <Card title="$6" icon="$7" href="$8">\n    $9\n  </Card>\n</CardGroup>',
+  },
+  {
+    name: 'Tabs',
+    prefix: 'fern-tabs',
+    jsxForm: true,
+    description: 'Tabbed content container with Tab children.',
+    props: [],
+    example: '<Tabs>\n  <Tab title="Python">\n    ```python\n    client.users.list()\n    ```\n  </Tab>\n  <Tab title="Node.js">\n    ```js\n    client.users.list()\n    ```\n  </Tab>\n</Tabs>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/tabs',
+    snippetBody: '<Tabs>\n  <Tab title="$1">\n    $2\n  </Tab>\n  <Tab title="$3">\n    $4\n  </Tab>\n</Tabs>',
+  },
+  {
+    name: 'Steps',
+    prefix: 'fern-steps',
+    jsxForm: true,
+    description: 'Numbered step-by-step instructions with Step children.',
+    props: [],
+    example: '<Steps>\n  <Step title="Install the SDK">\n    Run `npm install @acme/sdk`.\n  </Step>\n  <Step title="Initialize the client">\n    Pass your API key to the constructor.\n  </Step>\n  <Step title="Make your first request">\n    Call `client.users.list()` to verify setup.\n  </Step>\n</Steps>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/steps',
+    snippetBody: '<Steps>\n  <Step title="$1">\n    $2\n  </Step>\n  <Step title="$3">\n    $4\n  </Step>\n  <Step title="$5">\n    $6\n  </Step>\n</Steps>',
+  },
+  // Code
+  {
+    name: 'Code',
+    prefix: 'fern-code',
+    jsxForm: false,
+    description: 'Fenced code block with language selector and optional title.',
+    props: [],
+    example: '```python title="List users"\nusers = client.users.list()\nfor user in users:\n    print(user.name)\n```',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/code-blocks',
+    snippetBody: '```${1|javascript,typescript,python,bash,go,java,csharp,curl,http,ruby,swift,kotlin|} ${2:title}\n$3\n```',
+  },
+  {
+    name: 'CodeBlock',
+    prefix: 'fern-codeblock',
+    jsxForm: true,
+    description: 'JSX code block with deep-link support via a links map.',
+    props: [
+      { name: 'links', type: 'object', required: false, description: 'Map of text tokens in the code to URLs (makes them clickable).' },
+    ],
+    example: '<CodeBlock links={{"client.users.list": "/api/users/list"}}>\n```python\nusers = client.users.list()\n```\n</CodeBlock>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/code-blocks',
+    snippetBody: '<CodeBlock links={{"$1": "$2"}}>\n```${3|javascript,typescript,python,bash,go,java,csharp,curl,http|}\n$4\n```\n</CodeBlock>',
+  },
+  // Accordion
+  {
+    name: 'Accordion',
+    prefix: 'fern-accordion',
+    jsxForm: true,
+    description: 'Collapsible section with a clickable title.',
+    props: [
+      { name: 'title', type: 'string', required: true, description: 'Label shown on the collapsed toggle.' },
+    ],
+    example: '<Accordion title="What authentication methods are supported?">\n  We support API keys, OAuth 2.0, and JWT tokens.\n</Accordion>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/accordion',
+    snippetBody: '<Accordion title="$1">\n  $2\n</Accordion>',
+  },
+  {
+    name: 'AccordionGroup',
+    prefix: 'fern-accordiongroup',
+    jsxForm: true,
+    description: 'Group of Accordion components rendered as a unified FAQ list.',
+    props: [],
+    example: '<AccordionGroup>\n  <Accordion title="How do I reset my API key?">\n    Go to Settings → API Keys and click Regenerate.\n  </Accordion>\n  <Accordion title="What are the rate limits?">\n    100 requests per minute per API key.\n  </Accordion>\n</AccordionGroup>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/accordion',
+    snippetBody: '<AccordionGroup>\n  <Accordion title="$1">\n    $2\n  </Accordion>\n  <Accordion title="$3">\n    $4\n  </Accordion>\n</AccordionGroup>',
+  },
+  // Frame
+  {
+    name: 'Frame',
+    prefix: 'fern-frame',
+    jsxForm: true,
+    description: 'Bordered image frame with optional caption.',
+    props: [
+      { name: 'caption', type: 'string', required: false, description: 'Text displayed below the image.' },
+    ],
+    example: '<Frame caption="The Fern dashboard overview">\n  <img src="/images/dashboard.png" alt="Dashboard screenshot" />\n</Frame>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/frame',
+    snippetBody: '<Frame caption="$1">\n  <img src="$2" alt="$3" />\n</Frame>',
+  },
+);
