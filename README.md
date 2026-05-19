@@ -1,19 +1,35 @@
 # Fern Snippets
 
-> **Unofficial extension.** This is a community-built tool and is not affiliated with or endorsed by [Fern](https://buildwithfern.com).
+Rich autocomplete and hover documentation for [Fern](https://buildwithfern.com) MDX components in VS Code.
 
-VS Code snippets and rich autocomplete for [Fern](https://buildwithfern.com) documentation components. Type `fern-` or `<` in any `.mdx` or `.md` file to see all available components with inline documentation.
+> **Unofficial extension** — community-built, not affiliated with or endorsed by Fern.
+
+---
+
+## Features
+
+**Rich autocomplete** — type `fern-card` or `<Card` and the popup shows the component description, a props table, a usage example, and a link to the Fern docs.
+
+**Two trigger styles** — use whichever feels natural:
+- `fern-` prefix → `fern-card`, `fern-callout`, `fern-steps` …
+- `<` JSX trigger → `<Card`, `<Callout`, `<Steps` …
+
+**Hover documentation** — hover over any Fern tag already in your document to see its full reference inline.
+
+**40 components covered** — every component in the Fern catalog, across callouts, cards, tabs, steps, code blocks, accordions, tables, API reference embeds, and more.
+
+---
 
 ## Install
 
-Download the latest `fern-snippets-0.3.0.vsix` from the [Releases page](https://github.com/YOUR_USERNAME/fern-snippets/releases/latest), then install using one of the two methods below.
+Download the latest `fern-snippets-0.3.0.vsix` from the [Releases page](https://github.com/YOUR_USERNAME/fern-snippets/releases/latest).
 
-**Option A — VS Code UI (recommended):**
+**Option A — VS Code UI:**
 
 1. Open the Extensions panel (`Ctrl+Shift+X` / `Cmd+Shift+X`)
-2. Click the `...` menu in the top-right corner of the panel
+2. Click the `...` menu in the top-right of the panel
 3. Select **Install from VSIX...**
-4. Choose the downloaded `fern-snippets-0.3.0.vsix` file
+4. Choose the downloaded `.vsix` file
 
 **Option B — Command line:**
 
@@ -21,18 +37,15 @@ Download the latest `fern-snippets-0.3.0.vsix` from the [Releases page](https://
 code --install-extension fern-snippets-0.3.0.vsix
 ```
 
+---
+
 ## Usage
 
-In any `.mdx` or `.md` file, trigger completions in two ways:
+In any `.mdx` or `.md` file, start typing a trigger and select from the autocomplete dropdown. Press `Tab` to accept and move between placeholders. Props with fixed values (like `intent` or `cols`) show a choice dropdown at their tab stop.
 
-- **`fern-` prefix** — type `fern-card`, `fern-callout`, etc. and select from the dropdown
-- **`<` JSX trigger** — type `<Card`, `<Callout`, etc. to trigger by component name
+---
 
-Both triggers open a rich autocomplete popup showing the component description, props table, a usage example, and a link to the Fern docs. Select an item and press `Tab` to insert the snippet; use `Tab` to move between placeholders. Enum props show a choice dropdown at their tab stop.
-
-**Hover documentation** — hover over any Fern JSX tag already in your document (e.g. `<Warning>`) to see the same documentation panel inline.
-
-## Snippets
+## Components
 
 ### Callouts
 
@@ -124,6 +137,8 @@ Both triggers open a rich autocomplete popup showing the component description, 
 |---|---|---|
 | `fern-versions` | `<Versions>` | Show different content based on version selection |
 
-## Component Docs
+---
 
-Full Fern component documentation: [buildwithfern.com/learn/docs/writing-content/components/overview](https://buildwithfern.com/learn/docs/writing-content/components/overview)
+## Component docs
+
+Full Fern component reference: [buildwithfern.com/learn/docs/writing-content/components/overview](https://buildwithfern.com/learn/docs/writing-content/components/overview)
