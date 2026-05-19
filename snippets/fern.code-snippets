@@ -200,5 +200,28 @@
     "prefix": "fern-copy",
     "body": ["<Copy clipboard=\"$1\">$2</Copy>"],
     "description": "Fern Copy — click-to-copy with optional custom clipboard text"
+  },
+  "Fern Tooltip": {
+    "prefix": "fern-tooltip",
+    "body": ["<Tooltip tip=\"$1\">$2</Tooltip>"],
+    "description": "Fern Tooltip — hover info on trigger content"
+  },
+  "Fern Download": {
+    "prefix": "fern-download",
+    "body": [
+      "<Download src=\"$1\">",
+      "  <Button intent=\"primary\">$2</Button>",
+      "</Download>"
+    ],
+    "description": "Fern Download — file download with button trigger"
+  },
+  "Fern If": {
+    "prefix": "fern-if",
+    "body": [
+      "<If products={[\"$1\"]}>",
+      "  $2",
+      "</If>"
+    ],
+    "description": "Fern If — show content conditionally by product, version, or role"
   }
 }
