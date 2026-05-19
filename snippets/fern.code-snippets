@@ -47,5 +47,59 @@
     "prefix": "fern-launch",
     "body": ["<Launch>$1</Launch>"],
     "description": "Fern Launch callout"
+  },
+  "Fern Card": {
+    "prefix": "fern-card",
+    "body": [
+      "<Card title=\"$1\" icon=\"$2\" href=\"$3\">",
+      "  $4",
+      "</Card>"
+    ],
+    "description": "Fern Card with title, icon, href, and content"
+  },
+  "Fern CardGroup": {
+    "prefix": "fern-cardgroup",
+    "body": [
+      "<CardGroup cols={${1|2,3,4|}}>",
+      "  <Card title=\"$2\" icon=\"$3\" href=\"$4\">",
+      "    $5",
+      "  </Card>",
+      "  <Card title=\"$6\" icon=\"$7\" href=\"$8\">",
+      "    $9",
+      "  </Card>",
+      "</CardGroup>"
+    ],
+    "description": "Fern CardGroup with cols dropdown and two Card children"
+  },
+  "Fern Tabs": {
+    "prefix": "fern-tabs",
+    "body": [
+      "<Tabs>",
+      "  <Tab title=\"$1\">",
+      "    $2",
+      "  </Tab>",
+      "  <Tab title=\"$3\">",
+      "    $4",
+      "  </Tab>",
+      "</Tabs>"
+    ],
+    "description": "Fern Tabs with two Tab children"
+  },
+  "Fern Steps": {
+    "prefix": "fern-steps",
+    "body": [
+      "<Steps>",
+      "  <Step title=\"$1\">",
+      "    $2",
+      "  </Step>",
+      "  <Step title=\"$3\">",
+      "    $4",
+      "  </Step>",
+      "  <Step title=\"$5\">",
+      "    $6",
+      "  </Step>",
+      "</Steps>"
+    ],
+    "description": "Fern Steps with three Step children"
   }
 }
