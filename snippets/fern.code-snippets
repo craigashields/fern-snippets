@@ -223,5 +223,41 @@
       "</If>"
     ],
     "description": "Fern If — show content conditionally by product, version, or role"
+  },
+  "Fern EndpointRequestSnippet": {
+    "prefix": "fern-endpoint-request",
+    "body": ["<EndpointRequestSnippet endpoint=\"$1\" />"],
+    "description": "Fern EndpointRequestSnippet — embed API request code snippet (format: METHOD /path)"
+  },
+  "Fern EndpointResponseSnippet": {
+    "prefix": "fern-endpoint-response",
+    "body": ["<EndpointResponseSnippet endpoint=\"$1\" />"],
+    "description": "Fern EndpointResponseSnippet — embed API response code snippet (format: METHOD /path)"
+  },
+  "Fern EndpointSchemaSnippet": {
+    "prefix": "fern-endpoint-schema",
+    "body": [
+      "<EndpointSchemaSnippet endpoint=\"$1\" selector=\"${2|request,request.body,response,response.body|}\" />"
+    ],
+    "description": "Fern EndpointSchemaSnippet — embed API schema with selector dropdown"
+  },
+  "Fern RunnableEndpoint": {
+    "prefix": "fern-runnable-endpoint",
+    "body": ["<RunnableEndpoint endpoint=\"$1\" />"],
+    "description": "Fern RunnableEndpoint — interactive API request builder (format: METHOD /path)"
+  },
+  "Fern Schema": {
+    "prefix": "fern-schema",
+    "body": ["<Schema type=\"$1\" />"],
+    "description": "Fern Schema — display type definition from API reference"
+  },
+  "Fern ParamField": {
+    "prefix": "fern-paramfield",
+    "body": [
+      "<ParamField path=\"$1\" type=\"${2|string,number,boolean,object,array|}\">",
+      "  $3",
+      "</ParamField>"
+    ],
+    "description": "Fern ParamField — document an API parameter with type and description"
   }
 }
