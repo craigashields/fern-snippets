@@ -23,13 +23,16 @@ function makePrefixItem(
 function makeJsxItem(
   def: ComponentDef,
   position: vscode.Position,
+  document: vscode.TextDocument,
 ): vscode.CompletionItem {
   const item = new vscode.CompletionItem(def.name, vscode.CompletionItemKind.Snippet);
   item.detail = def.description;
   item.filterText = '<' + def.name;
   item.insertText = new vscode.SnippetString(def.snippetBody);
-  // Replace the typed `<` so insertion doesn't double it
-  item.range = new vscode.Range(position.translate(0, -1), position);
+  // Replace the typed `<` and any auto-closed `>` VS Code inserted immediately after it
+  const charAfterCursor = document.lineAt(position).text[position.character];
+  const rangeEnd = charAfterCursor === '>' ? position.translate(0, 1) : position;
+  item.range = new vscode.Range(position.translate(0, -1), rangeEnd);
   item.documentation = new vscode.MarkdownString(buildDoc(def), true);
   item.documentation.isTrusted = true;
   return item;
@@ -57,7 +60,7 @@ export class FernCompletionProvider implements vscode.CompletionItemProvider {
     if (context.triggerCharacter === '<' || linePrefix.endsWith('<')) {
       return COMPONENTS
         .filter(def => def.jsxForm)
-        .map(def => makeJsxItem(def, position));
+        .map(def => makeJsxItem(def, position, document));
     }
 
     return [];

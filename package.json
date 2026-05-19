@@ -3,7 +3,8 @@
   "displayName": "Fern Snippets",
   "description": "VS Code snippets and rich autocomplete for Fern documentation components",
   "version": "0.3.0",
-  "publisher": "fern-user",
+  "publisher": "craig-shields",
+  "icon": "assets/icon.png",
   "engines": {
     "vscode": "^1.120.0"
   },
