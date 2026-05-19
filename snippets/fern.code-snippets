@@ -167,5 +167,38 @@
       "<Button intent=\"${1|none,primary,success,warning,danger|}\" href=\"$2\">$3</Button>"
     ],
     "description": "Fern Button with intent dropdown, href, and label"
+  },
+  "Fern Anchor": {
+    "prefix": "fern-anchor",
+    "body": ["<Anchor id=\"$1\">$2</Anchor>"],
+    "description": "Fern Anchor for linking to non-heading content"
+  },
+  "Fern Aside": {
+    "prefix": "fern-aside",
+    "body": [
+      "<Aside>",
+      "  $1",
+      "</Aside>"
+    ],
+    "description": "Fern Aside — sticky right-side container"
+  },
+  "Fern Indent": {
+    "prefix": "fern-indent",
+    "body": [
+      "<Indent>",
+      "  $1",
+      "</Indent>"
+    ],
+    "description": "Fern Indent for nested or hierarchical content"
+  },
+  "Fern Icon": {
+    "prefix": "fern-icon",
+    "body": ["<Icon icon=\"$1\" />"],
+    "description": "Fern Icon — Font Awesome icon by name"
+  },
+  "Fern Copy": {
+    "prefix": "fern-copy",
+    "body": ["<Copy clipboard=\"$1\">$2</Copy>"],
+    "description": "Fern Copy — click-to-copy with optional custom clipboard text"
   }
 }
