@@ -9,12 +9,19 @@ VS Code snippets for [Fern](https://buildwithfern.com) documentation components.
 **From .vsix:** Download the latest `.vsix` release and run:
 
 ```
-code --install-extension fern-snippets-0.1.0.vsix
+code --install-extension fern-snippets-0.3.0.vsix
 ```
 
 ## Usage
 
-In any `.mdx` or `.md` file, type a trigger prefix and press `Tab` (or select from the autocomplete dropdown). Use `Tab` to move between placeholders. Enum props show a choice dropdown at their tab stop.
+In any `.mdx` or `.md` file, trigger completions in two ways:
+
+- **`fern-` prefix** — type `fern-card`, `fern-callout`, etc. and select from the dropdown
+- **`<` JSX trigger** — type `<Card`, `<Callout`, etc. to trigger by component name
+
+Both triggers open a rich autocomplete popup showing the component description, props table, a usage example, and a link to the Fern docs. Select an item and press `Tab` to insert the snippet; use `Tab` to move between placeholders. Enum props show a choice dropdown at their tab stop.
+
+**Hover documentation** — hover over any Fern JSX tag already in your document (e.g. `<Warning>`) to see the same documentation panel inline.
 
 ## Snippets
 
@@ -110,26 +117,39 @@ In any `.mdx` or `.md` file, type a trigger prefix and press `Tab` (or select fr
 
 ## Development
 
-**Validate snippets:**
+**Validate snippets (reference file):**
 
 ```
-node scripts/validate-snippets.js
+npm run validate
+```
+
+**Build the TypeScript extension:**
+
+```
+npm run build
+```
+
+**Watch mode (rebuilds on save):**
+
+```
+npm run watch
 ```
 
 **Package the extension:**
 
 ```
-npx @vscode/vsce package --allow-missing-repository
+npm run package
 ```
 
-This produces `fern-snippets-0.1.0.vsix` in the project root. The `--allow-missing-repository` flag suppresses the warning about the empty `repository.url` field in `package.json`.
+This produces `fern-snippets-0.3.0.vsix` in the project root.
 
 **Install locally from source:**
 
 ```
-npx @vscode/vsce package --allow-missing-repository
-code --install-extension fern-snippets-0.1.0.vsix
+npm run package
 ```
+
+Then in VS Code: Extensions panel → `...` → "Install from VSIX..." → select `fern-snippets-0.3.0.vsix`.
 
 ## Component Docs
 
