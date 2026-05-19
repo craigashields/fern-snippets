@@ -21,6 +21,12 @@
     "type": "git",
     "url": ""
   },
+  "scripts": {
+    "build":    "node build.js",
+    "watch":    "node build.js --watch",
+    "package":  "npm run build && npx @vscode/vsce package --allow-missing-repository",
+    "validate": "node scripts/validate-snippets.js"
+  },
   "contributes": {
     "snippets": [
       {
@@ -32,5 +38,10 @@
         "path": "./snippets/fern.code-snippets"
       }
     ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.120.0",
+    "esbuild": "^0.28.0",
+    "typescript": "^6.0.3"
   }
 }

@@ -3,3 +3,7 @@ scripts/
 .claude/
 .gitignore
 .vscodeignore
+src/
+build.js
+tsconfig.json
+node_modules/
