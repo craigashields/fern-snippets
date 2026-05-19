@@ -1,0 +1,36 @@
+{
+  "name": "fern-snippets",
+  "displayName": "Fern Snippets",
+  "description": "VS Code snippets for Fern documentation components",
+  "version": "0.1.0",
+  "publisher": "YOUR_PUBLISHER_ID",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "keywords": [
+    "fern",
+    "mdx",
+    "documentation",
+    "snippets",
+    "components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "contributes": {
+    "snippets": [
+      {
+        "language": "mdx",
+        "path": "./snippets/fern.code-snippets"
+      },
+      {
+        "language": "markdown",
+        "path": "./snippets/fern.code-snippets"
+      }
+    ]
+  }
+}
