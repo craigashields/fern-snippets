@@ -144,5 +144,28 @@
       "</AccordionGroup>"
     ],
     "description": "Fern AccordionGroup with two Accordion children"
+  },
+  "Fern Frame": {
+    "prefix": "fern-frame",
+    "body": [
+      "<Frame caption=\"$1\">",
+      "  <img src=\"$2\" alt=\"$3\" />",
+      "</Frame>"
+    ],
+    "description": "Fern Frame with caption and image"
+  },
+  "Fern Badge": {
+    "prefix": "fern-badge",
+    "body": [
+      "<Badge intent=\"${1|info,success,warning,error,note,tip,check,launch|}\">$2</Badge>"
+    ],
+    "description": "Fern Badge with intent dropdown and label text"
+  },
+  "Fern Button": {
+    "prefix": "fern-button",
+    "body": [
+      "<Button intent=\"${1|none,primary,success,warning,danger|}\" href=\"$2\">$3</Button>"
+    ],
+    "description": "Fern Button with intent dropdown, href, and label"
   }
 }
