@@ -241,3 +241,127 @@ COMPONENTS.push(
     snippetBody: '<Frame caption="$1">\n  <img src="$2" alt="$3" />\n</Frame>',
   },
 );
+
+COMPONENTS.push(
+  // Inline
+  {
+    name: 'Badge',
+    prefix: 'fern-badge',
+    jsxForm: true,
+    description: 'Inline badge label with configurable intent color.',
+    props: [
+      { name: 'intent', type: 'string', required: false, description: 'Color intent of the badge.', choices: ['info', 'success', 'warning', 'error', 'note', 'tip', 'check', 'launch'] },
+    ],
+    example: '<Badge intent="success">GA</Badge>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/badge',
+    snippetBody: '<Badge intent="${1|info,success,warning,error,note,tip,check,launch|}">$2</Badge>',
+  },
+  {
+    name: 'Button',
+    prefix: 'fern-button',
+    jsxForm: true,
+    description: 'Clickable button with intent style and href.',
+    props: [
+      { name: 'intent', type: 'string', required: false, description: 'Button color style.', choices: ['none', 'primary', 'success', 'warning', 'danger'] },
+      { name: 'href', type: 'string', required: false, description: 'URL the button links to.' },
+    ],
+    example: '<Button intent="primary" href="/quickstart">Get Started</Button>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/button',
+    snippetBody: '<Button intent="${1|none,primary,success,warning,danger|}" href="$2">$3</Button>',
+  },
+  {
+    name: 'Icon',
+    prefix: 'fern-icon',
+    jsxForm: true,
+    description: 'Inline Font Awesome icon rendered by name.',
+    props: [
+      { name: 'icon', type: 'string', required: true, description: 'Font Awesome icon name (e.g. "rocket", "check", "arrow-right").' },
+    ],
+    example: '<Icon icon="rocket" />',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/icon',
+    snippetBody: '<Icon icon="$1" />',
+  },
+  {
+    name: 'Copy',
+    prefix: 'fern-copy',
+    jsxForm: true,
+    description: 'Click-to-copy wrapper — copies displayed text or a custom clipboard value.',
+    props: [
+      { name: 'clipboard', type: 'string', required: false, description: 'Text to copy to clipboard instead of the visible content.' },
+    ],
+    example: '<Copy clipboard="npm install @acme/sdk">npm install @acme/sdk</Copy>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/copy',
+    snippetBody: '<Copy clipboard="$1">$2</Copy>',
+  },
+  {
+    name: 'Tooltip',
+    prefix: 'fern-tooltip',
+    jsxForm: true,
+    description: 'Hover tooltip that shows explanatory text over trigger content.',
+    props: [
+      { name: 'tip', type: 'string', required: true, description: 'Text shown inside the tooltip on hover.' },
+    ],
+    example: '<Tooltip tip="Requests per second your plan supports">rate limit</Tooltip>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/tooltip',
+    snippetBody: '<Tooltip tip="$1">$2</Tooltip>',
+  },
+  {
+    name: 'Anchor',
+    prefix: 'fern-anchor',
+    jsxForm: true,
+    description: 'Named anchor that makes non-heading content deep-linkable.',
+    props: [
+      { name: 'id', type: 'string', required: true, description: 'Unique ID used in the URL fragment (e.g. "my-section").' },
+    ],
+    example: '<Anchor id="authentication-flow">Authentication Flow</Anchor>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/anchor',
+    snippetBody: '<Anchor id="$1">$2</Anchor>',
+  },
+  // Layout
+  {
+    name: 'Aside',
+    prefix: 'fern-aside',
+    jsxForm: true,
+    description: 'Sticky right-side container for supplementary content.',
+    props: [],
+    example: '<Aside>\n  **Need help?** Contact support at support@acme.com.\n</Aside>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/aside',
+    snippetBody: '<Aside>\n  $1\n</Aside>',
+  },
+  {
+    name: 'Indent',
+    prefix: 'fern-indent',
+    jsxForm: true,
+    description: 'Visually indents nested or hierarchical content.',
+    props: [],
+    example: '<Indent>\n  Sub-items or continuation content goes here.\n</Indent>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/indent',
+    snippetBody: '<Indent>\n  $1\n</Indent>',
+  },
+  {
+    name: 'Download',
+    prefix: 'fern-download',
+    jsxForm: true,
+    description: 'File download wrapper — renders a button that triggers a file download.',
+    props: [
+      { name: 'src', type: 'string', required: true, description: 'Path or URL of the file to download.' },
+    ],
+    example: '<Download src="/assets/openapi.yaml">\n  <Button intent="primary">Download OpenAPI Spec</Button>\n</Download>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/download',
+    snippetBody: '<Download src="$1">\n  <Button intent="primary">$2</Button>\n</Download>',
+  },
+  {
+    name: 'If',
+    prefix: 'fern-if',
+    jsxForm: true,
+    description: 'Conditionally shows content based on product, version, or role.',
+    props: [
+      { name: 'products', type: 'string[]', required: false, description: 'Show only for these product slugs.' },
+      { name: 'versions', type: 'string[]', required: false, description: 'Show only for these version strings.' },
+      { name: 'roles', type: 'string[]', required: false, description: 'Show only for these user roles.' },
+    ],
+    example: '<If products={["enterprise"]}>\n  This feature is available on Enterprise plans only.\n</If>',
+    docUrl: 'https://buildwithfern.com/learn/docs/writing-content/components/if',
+    snippetBody: '<If products={["$1"]}>\n  $2\n</If>',
+  },
+);
