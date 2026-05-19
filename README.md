@@ -1,12 +1,21 @@
 # Fern Snippets
 
-VS Code snippets for [Fern](https://buildwithfern.com) documentation components. Type `fern-` in any `.mdx` or `.md` file to see all available snippets.
+> **Unofficial extension.** This is a community-built tool and is not affiliated with or endorsed by [Fern](https://buildwithfern.com).
+
+VS Code snippets and rich autocomplete for [Fern](https://buildwithfern.com) documentation components. Type `fern-` or `<` in any `.mdx` or `.md` file to see all available components with inline documentation.
 
 ## Install
 
-**From marketplace:** Search "Fern Snippets" in the VS Code Extensions panel.
+Download the latest `fern-snippets-0.3.0.vsix` from the [Releases page](https://github.com/YOUR_USERNAME/fern-snippets/releases/latest), then install using one of the two methods below.
 
-**From .vsix:** Download the latest `.vsix` release and run:
+**Option A — VS Code UI (recommended):**
+
+1. Open the Extensions panel (`Ctrl+Shift+X` / `Cmd+Shift+X`)
+2. Click the `...` menu in the top-right corner of the panel
+3. Select **Install from VSIX...**
+4. Choose the downloaded `fern-snippets-0.3.0.vsix` file
+
+**Option B — Command line:**
 
 ```
 code --install-extension fern-snippets-0.3.0.vsix
