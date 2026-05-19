@@ -1,0 +1,51 @@
+{
+  "Fern Callout": {
+    "prefix": "fern-callout",
+    "body": [
+      "<Callout intent=\"${1|info,warning,success,error,note,tip,check,launch|}\" title=\"$2\">",
+      "  $3",
+      "</Callout>"
+    ],
+    "description": "Fern Callout with intent dropdown and optional title"
+  },
+  "Fern Note": {
+    "prefix": "fern-note",
+    "body": ["<Note>$1</Note>"],
+    "description": "Fern Note callout"
+  },
+  "Fern Info": {
+    "prefix": "fern-info",
+    "body": ["<Info>$1</Info>"],
+    "description": "Fern Info callout"
+  },
+  "Fern Warning": {
+    "prefix": "fern-warning",
+    "body": ["<Warning>$1</Warning>"],
+    "description": "Fern Warning callout"
+  },
+  "Fern Success": {
+    "prefix": "fern-success",
+    "body": ["<Success>$1</Success>"],
+    "description": "Fern Success callout"
+  },
+  "Fern Error": {
+    "prefix": "fern-error",
+    "body": ["<Error>$1</Error>"],
+    "description": "Fern Error callout"
+  },
+  "Fern Tip": {
+    "prefix": "fern-tip",
+    "body": ["<Tip>$1</Tip>"],
+    "description": "Fern Tip callout"
+  },
+  "Fern Check": {
+    "prefix": "fern-check",
+    "body": ["<Check>$1</Check>"],
+    "description": "Fern Check callout"
+  },
+  "Fern Launch": {
+    "prefix": "fern-launch",
+    "body": ["<Launch>$1</Launch>"],
+    "description": "Fern Launch callout"
+  }
+}
