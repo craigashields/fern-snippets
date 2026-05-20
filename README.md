@@ -22,7 +22,7 @@ Rich autocomplete and hover documentation for [Fern](https://buildwithfern.com) 
 
 ## Install
 
-Download the latest `fern-snippets-0.3.0.vsix` from the [Releases page](https://github.com/YOUR_USERNAME/fern-snippets/releases/latest).
+Download the latest `fern-snippets-0.3.0.vsix` from the [Releases page](https://github.com/craigashields/fern-snippets/releases/latest).
 
 **Option A — VS Code UI:**
 
