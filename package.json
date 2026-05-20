@@ -29,10 +29,9 @@
   ],
   "contributes": {},
   "scripts": {
-    "build":    "node build.js",
-    "watch":    "node build.js --watch",
-    "package":  "npm run build && npx @vscode/vsce package --allow-missing-repository",
-    "validate": "node scripts/validate-snippets.js"
+    "build":   "node build.js",
+    "watch":   "node build.js --watch",
+    "package": "npm run build && npx @vscode/vsce package --allow-missing-repository"
   },
   "devDependencies": {
     "@types/vscode": "^1.120.0",

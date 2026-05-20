@@ -10,10 +10,8 @@ src/
   hover.ts        # FernHoverProvider (hover over JSX tags)
 build.js          # esbuild build script
 tsconfig.json     # TypeScript config
-scripts/
-  validate-snippets.js  # Validates the reference snippets/fern.code-snippets file
-snippets/
-  fern.code-snippets    # Reference file (not loaded by the extension)
+assets/
+  icon.png        # Extension icon (128x128)
 ```
 
 ## Setup
@@ -36,20 +34,16 @@ npm run watch
 
 Rebuilds `dist/extension.js` automatically on save.
 
-## Validate reference snippets
+## Type check
 
 ```
-npm run validate
+npx tsc --noEmit
 ```
-
-Checks that `snippets/fern.code-snippets` contains all 40 expected prefixes and is valid JSON.
 
 ## Add a new component
 
 1. Add a `ComponentDef` entry to the appropriate `COMPONENTS.push(...)` block in `src/components.ts`
-2. Add the corresponding entry to `snippets/fern.code-snippets` (reference file)
-3. Add the prefix to `EXPECTED_PREFIXES` in `scripts/validate-snippets.js`
-4. Run `npm run validate` to confirm
+2. Run `npx tsc --noEmit` to confirm no type errors
 
 ## Package
 
