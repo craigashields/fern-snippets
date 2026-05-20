@@ -2,7 +2,9 @@
 
 Rich autocomplete and hover documentation for [Fern](https://buildwithfern.com) MDX components in VS Code.
 
-> **Unofficial extension** — community-built, not affiliated with or endorsed by Fern.
+> **Unofficial extension** — community-built.
+
+<img src="assets/demo.gif" alt="Demo" width="800" />
 
 ---
 
@@ -17,6 +19,7 @@ Rich autocomplete and hover documentation for [Fern](https://buildwithfern.com) 
 **Hover documentation** — hover over any Fern tag already in your document to see its full reference inline.
 
 **40 components covered** — every component in the Fern catalog, across callouts, cards, tabs, steps, code blocks, accordions, tables, API reference embeds, and more.
+
 
 ---
 
